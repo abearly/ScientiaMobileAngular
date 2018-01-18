@@ -4,6 +4,8 @@ There are two AngularJS practical tests included in this repository.
 
 Both use [Laravel 5.3](https://laravel.com/docs/5.3) for their back-end, however, knowledge of Laravel is not required. All necessary back-end components have been set up as needed for each exercise.
 
+Specific instructions are included in each exercise.
+
 Setup is required prior to attempting these exercises.
 
 ## Setup
@@ -24,5 +26,3 @@ These steps should be done for each exercise.
 `npm install`
 3. Compile assets
 `gulp`
-
-![Basic Order Form](/images/order_form_basic.png?raw=true "Basic Order Form")
