@@ -62,9 +62,9 @@ All AngularJS files should live at `public/js/app` and all template files should
 * Template Files
     - `admin-angular.blade.php`
     - `home-angular.blade.php`
-    - `modal.blade.php`
+    - `product_modal.blade.php`
 
-`modal.blade.php` can either be used directly or as an example skeleton.
+`product_modal.blade.php` can either be used directly or as an example skeleton.
 
 All necessary dependencies, including UI-Router, have already been imported into the HTML, and the module has already been initialized (see resources/views/layouts/application_master.blade.php and resources/views/content.blade.php).
 
