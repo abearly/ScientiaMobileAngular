@@ -20,9 +20,9 @@ These should be installed prior to attempting the exercises.
 ### Installation
 These steps should be done for each exercise.
 
-1. Install composer dependencies
+1. Install composer dependencies:
 `composer update`
-2. Install node modules
+2. Install node modules:
 `npm install`
-3. Compile assets
+3. Compile assets:
 `gulp`
