@@ -28,7 +28,7 @@ Your final product should match the provided sample, so be sure to play around w
 * A list of available products, each including
   * Name
   * Price
-  * Add button
+  * Add button that disables after the product is added
 * An "Add All" button
 * A list of all items in the cart
   * If no items exist, a "Nothing to show" message
@@ -43,7 +43,7 @@ Your final product should match the provided sample, so be sure to play around w
 
 Your task is to replicate the sample using AngularJS (version 1.5.8). The back-end route for this is already in place at `/angular`. All files needed have also been provided, so you will need to edit them to complete the task.
 
-All AngularJS files live at `public\js\app` and all template files are at `resources\views`.
+All AngularJS files live at `public/js/app` and all template files are at `resources/views`.
 
 The following files will be needed and are the only ones that should be changed:
 
@@ -66,9 +66,7 @@ To complete this task, the following must be done<sup>1</sup>:
   * url: `/angular`
   * templateUrl: `view/home-angular`
 * Develop your controller in `order.controller.js`
-* Update the HTML template in `home-angular/blade.php`
-
-The final product should match the sample, and all AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
+* Update the HTML template in `home-angular.blade.php`
 
 [1] Please keep in mind that these are bare-bones instructions and do not include all steps.
 
@@ -81,4 +79,6 @@ Since this exercise does **not** require Laravel knowledge, the following should
 
   For example, use `<% vm.variableName %>` instead of `{{ vm.variableName }}`
 
+##### AngularJS Notes
+* The final product should match the sample, and all AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 * Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
