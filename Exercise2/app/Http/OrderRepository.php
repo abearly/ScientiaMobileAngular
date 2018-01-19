@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Order;
 use App\Http\Response\ApiResponse;
+use Exception;
 
 class OrderRepository
 {
@@ -20,6 +21,7 @@ class OrderRepository
             throw new Exception('');
         }
 
+        $this->orders = [];
         $orders = json_decode($json);
 
         foreach ($orders as $order) {
@@ -31,7 +33,9 @@ class OrderRepository
 
             $this->orders[] = new Order($data, $order->product_id);
         }
-        usort($this->orders, array($this, "cmp"));
+        if (!empty($this->orders)) {
+            usort($this->orders, array($this, "cmp"));
+        }
     }
 
     private function cmp($a, $b)

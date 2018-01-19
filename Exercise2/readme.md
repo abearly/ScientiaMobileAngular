@@ -4,8 +4,16 @@ The goal of this exercise is to extend the order form created in exercise 1 usin
 
 Additional packages have been added for use, so prior to starting please run the following commands:
 
-1. `npm install`
-2. `gulp` or `gulp watch`
+1. `composer update`
+2. `npm install`
+3. `gulp` or `gulp watch`
+
+## Viewing the Code
+
+1. Run the installation steps shown above
+2. Start a local server instance from the Exercise1 directory
+`php artisan serve`
+3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 
 ## Functionality
 
