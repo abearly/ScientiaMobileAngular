@@ -109,20 +109,20 @@ The final product should match the sample images and all test cases should be tr
 * Available products are populated using the API<sup>2</sup>
 * All current orders appear<sup>3</sup>
 * When a user presses "Add New" a modal appears (see [Add New image](#new))
-* When a user presses close on the "Add New" modal, the "Available Products" reset to their original state
-* When a user presses update on the "Add New" modal, the new product appears under "Available Products" on both the Admin Page and the Order Form
+* When a user presses close on the "Add New" modal, the "Available Products" reset to their original state and the modal closes
+* When a user presses update on the "Add New" modal, the new product appears under "Available Products" on both the Admin Page and the Order Form and the modal closes
 * Submission of a new product uses the [API](#api)
-* If any of the following is true upon submission of a new product, an error message appears, the modal data clears, and no changes exist in the "Available Products" list
+* If any of the following is true upon submission of a new product, an error message appears, the modal data clears, the modal remains open, and no changes exist in the "Available Products" list
     - The name field is blank
     - The name field matches an existing product
     - The price field is blank
     - The price field is not an integer
     - The price field is less than 1
 - When a user presses "Edit" for a product, a modal appears (see [Edit Product image](#edit))
-* When a user presses close on the "Edit" modal, the "Available Products" reset to their original state
-* When a user presses update on the "Edit" modal, the product appears under "Available Products" on both the Admin Page and the Order Form with the updated information
+* When a user presses close on the "Edit" modal, the "Available Products" reset to their original state and the modal closes
+* When a user presses update on the "Edit" modal, the product appears under "Available Products" on both the Admin Page and the Order Form with the updated information and the modal closes
 * Updating a product uses the [API](#api)
-* If any of the following is true upon update of a product, an error message appears, the modal data resets, and no changes exist in the "Available Products" list
+* If any of the following is true upon update of a product, an error message appears, the modal data resets, the modal remains open, and no changes exist in the "Available Products" list
     - The name field is blank
     - The name field matches an existing product
     - The price field is blank
