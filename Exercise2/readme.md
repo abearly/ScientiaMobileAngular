@@ -11,7 +11,7 @@ Additional packages have been added for use, so prior to starting please run the
 ## Viewing the Code
 
 1. Run the installation steps shown above
-2. Start a local server instance from the Exercise1 directory
+2. Start a local server instance from the Exercise2 directory
 `php artisan serve`
 3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 
