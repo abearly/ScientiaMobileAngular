@@ -26,3 +26,7 @@ These steps should be done for each exercise.
 `npm install`
 3. Compile assets:
 `gulp`
+
+## API
+
+Parts of these exercises will require the use of an API. This will be provided, and the documentation can be found in API.md.
