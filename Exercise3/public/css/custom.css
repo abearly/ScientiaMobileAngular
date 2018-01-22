@@ -1,0 +1,49 @@
+.list-group li span {
+    float:right;
+}
+
+.list-group li:hover {
+    background-color: lightblue;
+}
+
+.container {
+    margin-left: 10px;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.menu-links > div > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu-links > div > ul > li {
+    float: left;
+}
+
+.menu-links > div > ul > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-links > div > ul > li a:hover {
+    background-color: #111;
+}
+
+.menu-links .active {
+    background-color: blue;
+}
+
+.my-tab {
+    background-color: #F0F8FF;
+}
