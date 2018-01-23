@@ -33,16 +33,25 @@ class OrderController extends Controller
     public function submitOrder(Request $request)
     {
         $cart = $request->input('cart');
+        $user_id = $request->input('user_id');
+
         $repo = new OrderRepository();
         $orders = $repo->getOrders();
         $next_id = $repo->getNewId();
 
         foreach ($cart as $item) {
-            $order = new Order([
+            $data = [
                 'id' => $next_id,
                 'when' => date('Y-m-d H:i:s'),
                 'product_id' => $item['id'],
-                'fulfilled' => 0], $item['id']);
+                'fulfilled' => 0,
+            ];
+            if ($user_id) {
+                $data['user_id'] = $user_id;
+            } else {
+                $data['user_id'] = null;
+            }
+            $order = new Order($data, $item['id']);
             $repo->addToOrders($order);
             $next_id++;
         }

@@ -8,7 +8,7 @@ use App\Http\OrderRepository;
 
 class Order extends Model
 {
-    protected $fillable = ['id', 'when', 'product_id', 'fulfilled'];
+    protected $fillable = ['id', 'when', 'product_id', 'fulfilled', 'user_id'];
     protected $product;
 
     public function __construct($attributes, $product_id)

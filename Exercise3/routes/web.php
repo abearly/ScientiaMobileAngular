@@ -48,6 +48,7 @@ Route::post('/cancel-order', 'OrderController@cancelOrder');
 
 // Users
 Route::get('/users', 'UserController@get');
+Route::get('/users/{id}', 'UserController@getByUserId');
 Route::post('/change-password', 'UserController@changePassword');
 Route::post('/edit-user', 'UserController@editUser');
 Route::post('/add-user', 'UserController@addUser');

@@ -30,7 +30,8 @@ class OrderRepository
                 'id' => $order->id,
                 'when' => $order->when,
                 'product_id' => $order->product_id,
-                'fulfilled' => isset($order->fulfilled) ? $order->fulfilled : false
+                'fulfilled' => isset($order->fulfilled) ? $order->fulfilled : false,
+                'user_id' => $order->user_id,
             ];
 
             $this->orders[] = new Order($data, $order->product_id);

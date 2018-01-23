@@ -61,9 +61,27 @@ class UserController extends Controller
     }
 
 
-    public function create(Request $request)
+    public function getByUserId($id)
     {
+        $response = ApiResponse::instance();
+        $repo = new UserRepository();
+        $users = $repo->getUsers();
 
+        foreach ($users as $user) {
+            if ($user->id == $id) {
+                $response->status = ApiResponse::STATUS_CODE_OK;
+                $response->success = true;
+                $response->data = ['user' => $user];
+                $response->message = "User found!";
+                return $response->send();
+            }
+        }
+
+        $response->status = ApiResponse::STATUS_CODE_INVALID_INPUT;
+        $response->success = false;
+        $response->data = ['id' => $id];
+        $response->message = "No user found for ID";
+        return $response->send();
     }
 
     public function changePassword(Request $request) {
@@ -174,26 +192,26 @@ class UserController extends Controller
         $response = ApiResponse::instance();
 
         $error_data = [];
-        if ($user['username'] === null || $user['username'] === '') {
+        if (!array_key_exists('username', $user) || $user['username'] === null || $user['username'] === '') {
             $error_data['username'] = 'Username is required';
         }
 
-        if ($user['name'] === null || $user['name'] === '') {
+        if (!array_key_exists('name', $user) || $user['name'] === null || $user['name'] === '') {
             $error_data['name'] = 'Name is required';
         }
 
-        if ($user['role'] === null || $user['role'] === '') {
+        if (!array_key_exists('role', $user) || $user['role'] === null || $user['role'] === '') {
             $error_data['role'] = 'Role is required';
         }
 
-        if ($user['password'] === null || $user['password'] === '') {
+        if (!array_key_exists('password', $user) || $user['password'] === null || $user['password'] === '') {
             $error_data['password'] = 'Password is required';
-        }
-
-        if ($user['password'] !== $repeat) {
-            $error_data['password'] = 'Passwords do not match';
-        } else if (strlen($user['password']) < 6) {
-            $error_data['password'] = 'Password must be 6 characters minimum';
+        } else {
+            if ($user['password'] !== $repeat) {
+                $error_data['password'] = 'Passwords do not match';
+            } else if (strlen($user['password']) < 6) {
+                $error_data['password'] = 'Password must be 6 characters minimum';
+            }
         }
 
         if (!empty($error_data)) {

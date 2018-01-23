@@ -434,6 +434,45 @@ Example Data
 }
 ```
 
+### Get user by ID
+
+**GET** `/users/{id}`
+
+**Response** `200`
+
+Example data
+```json
+{
+    "success": true,
+    "message": "User found!",
+    "data": {
+        "user": {
+            "id": 1,
+            "username": "test_user",
+            "password": "testuser",
+            "name": "Test User",
+            "role": "user",
+            "token": "1k4hd2hf9"
+        }
+    },
+    "status": 200
+}
+```
+
+**Response** `400`
+
+Example Data
+```json
+{
+    "success": false,
+    "message": "No user found for ID",
+    "data": {
+        "id": "12"
+    },
+    "status": 400
+}
+```
+
 ### Add new user
 
 **POST** `/add-user`
