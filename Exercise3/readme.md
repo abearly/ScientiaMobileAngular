@@ -161,7 +161,7 @@ Please note that the "Available Products" and "Current Orders" sections of the A
 <a name="instructions"></a>
 ### Instructions
 
-To complete this task, the following must be done<sup>1</sup>:
+To complete this task, the following must be done<sup>[1](#fn1)</sup>:
 
 * Create a login page.
   - Create a `login` state with these attributes
@@ -185,7 +185,7 @@ The final product should match the sample images and all test cases should be tr
 ### Test Cases
 
 **Order Form**
-* All functionality from Exercises 1 and 2 still exist<sup>2</sup>
+* All functionality from Exercises 1 and 2 still exist<sup>[2](#fn2)</sup>
 * The menu appears with "Order Form" shown as active
 
 **Home**
@@ -205,8 +205,8 @@ The final product should match the sample images and all test cases should be tr
 - When a user submits an order on the Order Form, the order is marked as not fulfilled on the "Current Orders" table
 - When a user selects the "Users" tab
   - The "Products" information disappears
-  - All existing users appear<sup>3</sup>
-  - The "Remove" button is disabled for the logged in user<sup>4</sup>
+  - All existing users appear<sup>[3](#fn3)</sup>
+  - The "Remove" button is disabled for the logged in user<sup>[4](#fn4)</sup>
 - When a user presses "Add New" a modal appears
 - When a user presses close on the "Add New" modal, the "Users" reset to their original state and the modal closes
 - When a user presses update on the "Add New" modal, the new user appears under "Users" on the Admin Page and the modal closes
@@ -352,10 +352,13 @@ Since this exercise does **not** require Laravel knowledge, the following should
 ---
 ## Footnotes
 
+<a name="fn1"></a>
 [1] Please keep in mind that these are bare-bones instructions and do not include all steps. They do assume that Exercises 1 and 2 are already complete.
 
+<a name="fn2"></a>
 [2] Original products should match Exercise 1
 
+<a name="fn3"></a>
 [3] By default, two users will exist with the following information. Only Username, Name, and Role should be visible.
 
 | ID | Username   | Name       | Password  | Role  | Token      |
@@ -363,4 +366,5 @@ Since this exercise does **not** require Laravel knowledge, the following should
 | 1  | test_user  | Test User  | testuser  | user  | 1k4hd2hf9d |
 | 2  | test_admin | Test Admin | testadmin | admin | 9d62hdo39a |
 
+<a name="fn4"></a>
 [4] This is to prevent a user from removing themselves while logged in

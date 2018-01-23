@@ -95,7 +95,7 @@ The modal should be created using [UI Bootstrap](https://angular-ui.github.io/bo
 <a name="instructions"></a>
 ### Instructions
 
-To complete this task, the following must be done<sup>1</sup>:
+To complete this task, the following must be done<sup>[1](#fn1)</sup>:
 
 * Extend the Home template (refer to [Order Form image](#order))
     - Include a link to the Admin page
@@ -118,7 +118,7 @@ The final product should match the sample images and all test cases should be tr
 
 **Order Form**
 
-* The order form products are populated using the API<sup>2</sup>
+* The order form products are populated using the API<sup>[2](#fn2)</sup>
 * All basic functionality from Exercise 1 still exists
 * When a user presses "Submit Order"
     - An success message appears on the Order Form page
@@ -128,8 +128,8 @@ The final product should match the sample images and all test cases should be tr
 **Admin Page**
 
 * All available products appear
-* Available products are populated using the API<sup>2</sup>
-* All current orders appear<sup>3</sup>
+* Available products are populated using the API<sup>[2](#fn2)</sup>
+* All current orders appear<sup>[3](#fn3)</sup>
 * When a user presses "Add New" a modal appears (see [Add New image](#new))
 * When a user presses close on the "Add New" modal, the "Available Products" reset to their original state and the modal closes
 * When a user presses update on the "Add New" modal, the new product appears under "Available Products" on both the Admin Page and the Order Form and the modal closes
@@ -190,8 +190,11 @@ Since this exercise does **not** require Laravel knowledge, the following should
 ---
 ## Footnotes
 
+<a name="fn1"></a>
 [1] Please keep in mind that these are bare-bones instructions and do not include all steps. They do assume that Exercise 1 is already complete.
 
+<a name="fn2"></a>
 [2] Original products should match Exercise 1
 
+<a name="fn3"></a>
 [3] No orders will exist by default

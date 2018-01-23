@@ -75,7 +75,7 @@ Bootstrap 3 CSS is also included.
 <a name="instructions"></a>
 ### Instructions
 
-To complete this task, the following must be done<sup>1</sup>:
+To complete this task, the following must be done<sup>[1](#fn1)</sup>:
 
 * Create a `home` state with these attributes
   * url: `/angular`
@@ -140,4 +140,5 @@ Since this exercise does **not** require Laravel knowledge, the following should
 ---
 ## Footnotes
 
+<a name="fn1"></a>
 [1] Please keep in mind that these are bare-bones instructions and do not include all steps.
