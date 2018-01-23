@@ -144,7 +144,7 @@ Please note that the "Available Products" and "Current Orders" sections of the A
 
 ### Instructions
 
-To complete this task, the following must be done<sub>1</sub>:
+To complete this task, the following must be done<sup>1</sup>:
 
 * Create a login page.
   - Create a `login` state with these attributes
@@ -188,6 +188,7 @@ The final product should match the sample images and all test cases should be tr
 - When a user selects the "Users" tab
   - The "Products" information disappears
   - All existing users appear<sup>3</sup>
+  - The "Remove" button is disabled for the logged in user<sup>4</sup>
 - When a user presses "Add New" a modal appears
 - When a user presses close on the "Add New" modal, the "Users" reset to their original state and the modal closes
 - When a user presses update on the "Add New" modal, the new user appears under "Users" on the Admin Page and the modal closes
@@ -331,6 +332,8 @@ Since this exercise does **not** require Laravel knowledge, the following should
 [2] Original products should match Exercise 1
 
 [3] By default, two users will exist with the following information. Only Username, Name, and Role should be visible.
+
+[4] This is to prevent a user from removing themselves while logged in
 
 | ID | Username   | Name       | Password  | Role  | Token      |
 | -- | ---------- | ---------- | --------- | ----- | ---------- |
