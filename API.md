@@ -22,7 +22,8 @@ The API required for completing these exercises has been provided to you.
     - [Change Password](#changepassword)
     - [Delete](#deleteuser)
 
-## Products <a name="products"></a>
+<a name="products"></a>
+## Products
 
 ### Get all available products <a name="getproducts"><a/>
 
