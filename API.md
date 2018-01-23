@@ -25,7 +25,8 @@ The API required for completing these exercises has been provided to you.
 <a name="products"></a>
 ## Products
 
-### Get all available products <a name="getproducts"><a/>
+<a name="getproducts"><a/>
+### Get all available products
 
 **GET** `/products`
 
@@ -53,7 +54,8 @@ Example Data
 }
 ```
 
-### Add a new product <a name="addproduct"></a>
+<a name="addproduct"></a>
+### Add a new product
 
 **POST** `/add-product`
 
@@ -102,7 +104,8 @@ Data
 }
 ```
 
-### Edit existing product <a name="editproduct"></a>
+<a name="editproduct"></a>
+### Edit existing product
 
 **POST** `/edit-product`
 
@@ -152,7 +155,8 @@ Data
 }
 ```
 
-### Remove product <a name="removeproduct"></a>
+<a name="removeproduct"></a>
+### Remove product
 
 **POST** `/remove-product`
 
@@ -199,7 +203,8 @@ Data
 
 The error message will change based on the [product validation rules](#validation)
 
-### Product Validation <a name="validation"></a>
+<a name="validation"></a>
+### Product Validation
 
 | Rule                    | Error Message              |
 | ----------------------- | -------------------------- |
@@ -209,9 +214,11 @@ The error message will change based on the [product validation rules](#validatio
 | Price is not an integer | Invalid price              |
 | Price is less than 1    | Invalid price              |
 
-## Orders <a name="orders"></a>
+<a name="orders"></a>
+## Orders
 
-### Get all orders <a name="getorders"></a>
+<a name="getorders"></a>
+### Get all orders
 
 **GET** `/orders`
 
@@ -249,7 +256,8 @@ Example Data
 }
 ```
 
-### Submit an order <a name="submitorder"></a>
+<a name="submitorder"></a>
+### Submit an order
 
 **POST** `/submit-order`
 
@@ -313,7 +321,8 @@ Data
 }
 ```
 
-### Fulfill an order <a name="fulfill"></a>
+<a name="fulfill"></a>
+### Fulfill an order
 
 **POST** `/fulfill`
 
@@ -372,7 +381,8 @@ Data
 }
 ```
 
-### Cancel order <a name="cancelorder"></a>
+<a name="cancelorder"></a>
+### Cancel order
 
 **POST** `/cancel-order`
 
@@ -420,9 +430,11 @@ Data
 }
 ```
 
-## Users <a name="users"></a>
+<a name="users"></a>
+## Users
 
-### Get all users <a name="getusers"></a>
+<a name="getusers"></a>
+### Get all users
 
 **GET** `/users`
 
@@ -455,7 +467,8 @@ Example Data
 }
 ```
 
-### Get user by ID <a name="getusersbyid"></a>
+<a name="getusersbyid"></a>
+### Get user by ID
 
 **GET** `/users/{id}`
 
@@ -494,7 +507,8 @@ Example Data
 }
 ```
 
-### Add new user <a name="adduser"></a>
+<a name="adduser"></a>
+### Add new user
 
 **POST** `/add-user`
 
@@ -559,7 +573,8 @@ Example Data
 
 The data values will change based on the [user validation rules](#uservalidation)
 
-### Edit an existing user <a name="edituser"></a>
+<a name="edituser"></a>
+### Edit an existing user
 
 **POST** `/edit-user`
 
@@ -626,7 +641,8 @@ Example Data
 
 The data values will change based on the [user validation rules](#uservalidation)
 
-### Change password <a name="changepassword"></a>
+<a name="changepassword"></a>
+### Change password
 
 **POST** `/change-password`
 
@@ -684,7 +700,8 @@ Example Data
 
 The error message will change based on the [user validation rules](#uservalidation)
 
-### Delete user <a name="deleteuser"></a>
+<a name="deleteuser"></a>
+### Delete user
 
 **POST** `/delete-user`
 
@@ -730,7 +747,8 @@ Example Data
 }
 ```
 
-### User validation rules <a name="uservalidation"></a>
+<a name="uservalidation"></a>
+### User validation rules
 
 The following shows each validation rule and the response message if broken.
 

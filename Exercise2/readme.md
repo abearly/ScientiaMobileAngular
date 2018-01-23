@@ -20,15 +20,16 @@ Additional packages have been added for use, so prior to starting please run the
     - [AngularJS](#angularjs)
     - [Laravel](#laravel)
 
-
-## Viewing the Code <a name="viewingthecode"></a>
+<a name="viewingthecode"></a>
+## Viewing the Code
 
 1. Run the installation steps shown above
 2. Start a local server instance from the Exercise2 directory
 `php artisan serve`
 3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 
-## Functionality <a name="functionality"></a>
+<a name="functionality"></a>
+## Functionality
 
 This exercise will add the following functionalities:
 
@@ -40,30 +41,36 @@ This exercise will add the following functionalities:
     - Remove existing products
     - Display all submitted orders
 
-### Final Products <a name="finalproducts"></a>
+<a name="finalproducts"></a>
+### Final Products
 The final products should appear as follows:
 
-#### Order Form <a name="order"></a>
+<a name="order"></a>
+#### Order Form
 ![alt text](images/OrderForm.png "Order Form")
 
 The two changes here are a link to the Admin page and a "Submit Order" button.
 
-#### Admin Page <a name="admin"></a>
+<a name="admin"></a>
+#### Admin Page
 ![alt text](images/Admin.png "Admin Page")
 
 The "Current Orders" section should reflect any submitted orders. There will be no orders by default, so this section should display a "Nothing to show" message at first.
 
-#### Add New Product <a name="new"></a>
+<a name="new"></a>
+#### Add New Product
 ![alt text](images/AddNew.png "Add New Product")
 
 The option to add a new product should appear in a modal.
 
-#### Edit Product <a name="edit"></a>
+<a name="edit"></a>
+#### Edit Product
 ![alt text](images/EditProduct.png "Edit Product")
 
 The option to edit a product should appear in a modal.
 
-## The Task <a name="task"></a>
+<a name="task"></a>
+## The Task
 
 Your task is to create the functionality described above. You should build upon existing files created/edited in exercise 1 as well as create new files as necessary.
 
@@ -85,7 +92,8 @@ Bootstrap 3 CSS is also included.
 
 The modal should be created using [UI Bootstrap](https://angular-ui.github.io/bootstrap/), which has already been imported into the HTML.
 
-### Instructions <a name="instructions"></a>
+<a name="instructions"></a>
+### Instructions
 
 To complete this task, the following must be done<sup>1</sup>:
 
@@ -105,7 +113,8 @@ To complete this task, the following must be done<sup>1</sup>:
 
 The final product should match the sample images and all test cases should be true.
 
-### Test Cases <a name="testcases"></a>
+<a name="testcases"></a>
+### Test Cases
 
 **Order Form**
 
@@ -145,8 +154,11 @@ The final product should match the sample images and all test cases should be tr
 - When a user submits an order from the Order Form, the new order(s) appear under "Current Orders"
 - When a user presses the "Home" link, they are moved to the Order Form page
 
-## Important Notes <a name="important"></a>
-### AngularJS <a name="angularjs"></a>
+<a name="important"></a>
+## Important Notes
+
+<a name="angularjs"></a>
+### AngularJS
 
 * All AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 * If creating new files:
@@ -164,6 +176,7 @@ The final product should match the sample images and all test cases should be tr
     Run `gulp` or restart `gulp watch` after updating
 * Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
 
+<a name="laravel"></a>
 ### Laravel
 
 Since this exercise does **not** require Laravel knowledge, the following should be kept in mind:

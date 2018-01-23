@@ -20,14 +20,16 @@ As always, please run the following commands prior to starting:
     - [AngularJS](#angularjs)
     - [Laravel](#laravel)
 
-## Viewing the Code <a name="viewingthecode"></a>
+<a name="viewingthecode"></a>
+## Viewing the Code
 
 1. Run the installation steps shown above
 2. Start a local server instance from the Exercise3 directory
 `php artisan serve`
 3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 
-## Functionality <a name="functionality"></a>
+<a name="functionality"></a>
+## Functionality
 
 This exercise will include a variety of additions and changes.
 
@@ -48,7 +50,8 @@ This exercise will include a variety of additions and changes.
     - Display/edit user information
     - Display user's orders
 
-### Final Products <a name="finalproducts"></a>
+<a name="finalproducts"></a>
+### Final Products
 
 The final products should appear as follows. Please note that exactly copying appearance is not required, however the basic CSS and structure needed has been provided so that it can be used.
 
@@ -123,7 +126,8 @@ The option to change a user's password should appear in a modal.
 *Edit User*
 ![alt text](images/MyAccountAdminEdit.png "My Account Admin Edit")
 
-## The Task <a name="task"></a>
+<a name="task"></a>
+## The Task
 
 Your task is to create the functionality described above. You should build upon existing files created/edited in exercises 1 and 2 as well as create new files as necessary.
 
@@ -154,7 +158,8 @@ The modals and tabs (see admin page) should be created using [UI Bootstrap](http
 
 Please note that the "Available Products" and "Current Orders" sections of the Admin Page have been switch from lists to tables. This is not required, however, the CSS needed to keep them as lists has **not** been provided.
 
-### Instructions <a name="instructions"></a>
+<a name="instructions"></a>
+### Instructions
 
 To complete this task, the following must be done<sup>1</sup>:
 
@@ -176,7 +181,8 @@ To complete this task, the following must be done<sup>1</sup>:
 
 The final product should match the sample images and all test cases should be true.
 
-### Test Cases <a name="testcases"></a>
+<a name="testcases"></a>
+### Test Cases
 
 **Order Form**
 * All functionality from Exercises 1 and 2 still exist<sup>2</sup>
@@ -306,8 +312,11 @@ In this section, user refers to the logged in user.
 - When the user presses Log Out they are directed to the Login page with that menu button active
 - After the user presses Log Out, if they click on any of the menu links they are directed to the page, but are considered anonymous
 
-## Important Notes <a name="important"></a>
-### AngularJS <a name="angularjs"></a>
+<a name="important"></a>
+## Important Notes
+
+<a name="angularjs"></a>
+### AngularJS
 * All AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 * If creating new files:
     - Put them in `public/js/app`
@@ -329,7 +338,8 @@ In this section, user refers to the logged in user.
     Run `gulp` or restart `gulp watch` after updating
 * Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
 
-### Laravel <a name="laravel"></a>
+<a name="laravel"></a>
+### Laravel
 
 Since this exercise does **not** require Laravel knowledge, the following should be kept in mind:
 

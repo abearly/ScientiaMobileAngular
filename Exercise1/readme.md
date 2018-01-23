@@ -24,7 +24,8 @@ Perform the following setup steps:
   - [AngularJS](#angularjs)
   - [Laravel](#laravel)
 
-## Viewing the Sample <a name="viewingthesample"></a>
+<a name="viewingthesample"></a>
+## Viewing the Sample
 
 1. Run the installation steps shown above
 2. Start a local server instance from the Exercise1 directory
@@ -32,7 +33,8 @@ Perform the following setup steps:
 3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 4. Select the "Sample" link.
 
-## Functionality <a name="functionality"></a>
+<a name="functionality"></a>
+## Functionality
 
 Your final product should match the provided sample, so be sure to play around with it prior to starting. The following functionality exists.
 
@@ -50,7 +52,8 @@ Your final product should match the provided sample, so be sure to play around w
   * The total price of all items in the cart
   * A "Remove All" button
 
-## The Task <a name="task"></a>
+<a name="task"></a>
+## The Task
 
 Your task is to replicate the sample using AngularJS (version 1.5.8). The back-end route for this is already in place at `/angular`. All files needed have also been provided, so you will need to edit them to complete the task.
 
@@ -69,7 +72,8 @@ All necessary dependencies, including UI-Router, have already been imported into
 
 Bootstrap 3 CSS is also included.
 
-### Instructions <a name="instructions"></a>
+<a name="instructions"></a>
+### Instructions
 
 To complete this task, the following must be done<sup>1</sup>:
 
@@ -79,7 +83,8 @@ To complete this task, the following must be done<sup>1</sup>:
 * Develop your controller in `order.controller.js`
 * Update the HTML template in `home-angular.blade.php`
 
-### Test Cases <a name="testcases"></a>
+<a name="testcases"></a>
+### Test Cases
 
 * A list of four products appears (see below for specifics)
 * Each product has an "Add" button
@@ -113,14 +118,17 @@ To complete this task, the following must be done<sup>1</sup>:
 | Product 3 | $20   |
 | Product 4 | $10   |
 
-## Important Notes <a name="important"></a>
+<a name="important"></a>
+## Important Notes
 
-### AngularJS <a name="angularjs"></a>
+<a name="angularjs"></a>
+### AngularJS
 
 * The final product should match the sample, and all AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 * Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
 
-### Laravel <a name="laravel"></a>
+<a name="laravel"></a>
+### Laravel
 
 Since this exercise does **not** require Laravel knowledge, the following should be kept in mind:
 
