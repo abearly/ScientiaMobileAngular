@@ -20,6 +20,8 @@
     position: absolute;
     right: 10px;
     top: 18px;
+    z-index: 100;
+    clear: both;
 }
 
 .menu-links > div > ul {

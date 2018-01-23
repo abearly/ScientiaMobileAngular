@@ -34,6 +34,11 @@ Route::get('/admin/angular', function() {
     return view('content');
 });
 
+Route::get('/myaccount', function() {
+    return view('content');
+});
+
+
 // Products
 Route::get('/products', 'ProductController@get');
 Route::post('/add-product', 'ProductController@addProduct');

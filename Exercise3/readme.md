@@ -32,6 +32,9 @@ This exercise will include a variety of additions and changes.
         - Add a new user
 - Add a login page
 - Show a menu with changing active tab based on user role
+- Show a My Account page
+    - Display/edit user information
+    - Display user's orders
 
 ### Final Products
 
@@ -90,6 +93,24 @@ The option to edit a user should appear in a modal.
 
 The option to change a user's password should appear in a modal.
 
+### My Account
+
+**Normal User**
+
+*Read Only*
+![alt text](images/MyAccountUserRead.png "My Account User Readonly")
+
+*Edit User*
+![alt text](images/MyAccountUserEdit.png "My Account User Edit")
+
+**Admin User**
+
+*Read Only*
+![alt text](images/MyAccountAdminRead.png "My Account Admin Readonly")
+
+*Edit User*
+![alt text](images/MyAccountAdminEdit.png "My Account Admin Edit")
+
 ## The Task
 
 Your task is to create the functionality described above. You should build upon existing files created/edited in exercises 1 and 2 as well as create new files as necessary.
@@ -109,6 +130,7 @@ All AngularJS files should live at `public/js/app` and all template files should
   - `product_modal.blade.php`
   - `user_modal.blade.php`
   - `welcome.blade.php`
+  - `myaccount.blade.php`
 
 All modal templates can either be used directly or as an example skeleton.
 
@@ -135,6 +157,10 @@ To complete this task, the following must be done<sub>1</sub>:
 * Create a menu and add it to all pages. This **must** be done using a custom directive.
 * Update the Admin Page
   - Update the template in `angular-admin.blade.php`
+- Create a "My Account" page
+    - Create a `myaccount` state with these attributes
+        - url: `/myaccount`
+        - templateUrl: `view/myaccount`
 
 The final product should match the sample images and all test cases should be true.
 
@@ -152,9 +178,11 @@ The final product should match the sample images and all test cases should be tr
 * All functionality from Exercise 2 still exists
 * The "Products" tab is open by default
 * The "Current Orders" table shows "Yes" or "No" under "Fulfilled?"
+* The "Current Orders" table shows the user's name for any order placed by a logged in user
+* The "Current Orders" table shows 'Guest' for any order placed by an anonymous user
 * When a user presses "Fulfill Order"
   - The fulfillment status for the order changes to "Yes"
-  - The "Fulfill Order" button for that order disables
+  - The "Fulfill Order" and "Cancel Order" buttons for that order disables
 - When a user presses "Cancel Order" for an order, the order no longer appears on the table
 - When a user submits an order on the Order Form, the order is marked as not fulfilled on the "Current Orders" table
 - When a user selects the "Users" tab
@@ -176,7 +204,9 @@ The final product should match the sample images and all test cases should be tr
 - When a user presses "Edit" for a user, a modal appears
 - When a user presses close on the "Edit" modal, the "Users" reset to their original state and the modal closes
 - When a user presses update on the "Edit" modal, the user appears under "Users" on the Admin Page with the updated information and the modal closes
+- When a user updates their own information and changes their "name", the menu welcome message changes to reflect the name change
 - Updating a user uses the API
+- When a user's information is updated, those updates are reflected on the My Account page for that user on a subsequent login
 - If any of the following is true upon update of a user, a error messages appears, the modal data resets, the modal remains open, and no changes exist in the "Users" list
   - The username field is blank
   - The username is not unique
@@ -212,9 +242,56 @@ The final product should match the sample images and all test cases should be tr
 * The menu appears on every page
 * The menu shows a "Home" button that is active at `/`
 * The menu shows an "Order Form" button that is active at `/angular`
-* If a user is logged in, the menu shows a welcome message including their username
+* If a user is logged in, the menu shows a welcome message including their name
+    - This message is a link to the "My Account" page for the user
 * If a user is logged in and has a role of "admin", the menu shows an "Admin" button that is active at `/admin/angular`
+* If a user is logged in, the menu shows a "Logout" button
 * If a user is not logged in, the menu shows a "Login" button that is active at `/login`
+
+**My Account**
+
+In this section, user refers to the logged in user.
+
+* The menu appears with *no* active tab
+* The user's username appears in the page title
+* The user's username and name appear statically under "Account information" when the page loads
+* When the user presses "Edit", a form appears allowing the user to edit their
+    - Username
+    - Name
+    - Password
+- When the user presses "Edit", the password field is disabled and the change password checkbox is unchecked by default
+- When the user checks the change password checkbox, the password field enables
+- When the user checks the change password checkbox, a confirm password box appears
+- When the user unchecks the change password checkbox, the password field disables
+- When the user unchecks the change password checkbox, the confirm password field disappears
+- When the user unchecks the change password checkbox, the password field resets to its original value
+- When the user presses "Cancel", the fields reset to their original values (i.e., if "Edit" is pressed again, the changes do not persist)
+- When the user presses "Cancel", the change password field becomes unchecked and the password field disables
+- When the user presses "Cancel", the form disappears and the original, unchanged account information displays
+- When the user presses "Submit", the form disappears and the account information displays with any changes made
+- When a user presses "Submit" after changing their "name", the menu welcome message changes to reflect the name change
+- When a user presses "Submit" after changing their "username", the page title changes to reflect the name change
+- Updating a user's information uses the API
+- When a user updates their information, on a subsequent login by an admin user, the changes are reflected on the admin page
+- If any of the following is true upon submission of a user update, error messages appear, no menu or header changes occur, and the form remains visible
+    - The username field is blank
+    - The username is not unique
+    - The name field is blank
+    - The password field is blank if and only if change password is unchecked
+    - The confirm password field is blank if and only if change password is unchecked
+    - The password field does not match the confirm password field if and only if change password is unchecked
+- The user's orders appear in a table (none by default)
+- When a the user submits an order from the Order Form, the new order(s) appear under "My Orders", marked as unfulfilled
+- Any fulfilled order has its "Cancel Order" button disabled
+- When the user presses "Cancel Order", the order disappears from the list
+- When the user presses "Cancel Order", the order no longer appears on the "Current Orders" list on the admin page
+
+**Logout**
+
+- When the user presses Log Out the menu welcome message is removed
+- When the user presses Log Out the Admin Page button disappears (if applicable)
+- When the user presses Log Out they are directed to the Login page with that menu button active
+- After the user presses Log Out, if they click on any of the menu links they are directed to the page, but are considered anonymous
 
 ##### AngularJS Notes
 * All AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)

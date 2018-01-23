@@ -123,6 +123,9 @@ class UserController extends Controller
     public function editUser(Request $request)
     {
         $user = $request->input('user');
+
+        $change_password = $request->input('changePassword') ? $request->input('changePassword') : false;
+
         $response = ApiResponse::instance();
 
         $error_data = [];
@@ -136,6 +139,18 @@ class UserController extends Controller
 
         if ($user['role'] === null || $user['role'] === '') {
             $error_data['role'] = 'Role is required';
+        }
+
+        if ($change_password) {
+            if (!array_key_exists('password', $user) || $user['password'] === null || $user['password'] === '') {
+                $error_data['password'] = 'Password is required';
+            } else {
+                if ($user['password'] !== $request->input('repeat')) {
+                    $error_data['password'] = 'Passwords do not match';
+                } else if (strlen($user['password']) < 6) {
+                    $error_data['password'] = 'Password must be 6 characters minimum';
+                }
+            }
         }
 
         if (!empty($error_data)) {
@@ -168,6 +183,7 @@ class UserController extends Controller
                 $item->username = $user['username'];
                 $item->name = $user['name'];
                 $item->role = $user['role'];
+                $item->password = $user['password'];
                 break;
             }
         }
