@@ -8,14 +8,27 @@ Additional packages have been added for use, so prior to starting please run the
 2. `npm install`
 3. `gulp` or `gulp watch`
 
-## Viewing the Code
+## Table of Contents
+
+* [Viewing the Code](#viewingthecode)
+* [Functionality](#functionality)
+    - [Final Product Images](#finalproducts)
+- [The Task](#task)
+    - [Instructions](#instructions)
+    - [Test Cases](#testcases)
+- [Important Notes](#important)
+    - [AngularJS](#angularjs)
+    - [Laravel](#laravel)
+
+
+## Viewing the Code <a name="viewingthecode"></a>
 
 1. Run the installation steps shown above
 2. Start a local server instance from the Exercise2 directory
 `php artisan serve`
 3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 
-## Functionality
+## Functionality <a name="functionality"></a>
 
 This exercise will add the following functionalities:
 
@@ -27,7 +40,7 @@ This exercise will add the following functionalities:
     - Remove existing products
     - Display all submitted orders
 
-### Final Products
+### Final Products <a name="finalproducts"></a>
 The final products should appear as follows:
 
 #### Order Form <a name="order"></a>
@@ -50,7 +63,7 @@ The option to add a new product should appear in a modal.
 
 The option to edit a product should appear in a modal.
 
-## The Task
+## The Task <a name="task"></a>
 
 Your task is to create the functionality described above. You should build upon existing files created/edited in exercise 1 as well as create new files as necessary.
 
@@ -72,7 +85,7 @@ Bootstrap 3 CSS is also included.
 
 The modal should be created using [UI Bootstrap](https://angular-ui.github.io/bootstrap/), which has already been imported into the HTML.
 
-### Instructions
+### Instructions <a name="instructions"></a>
 
 To complete this task, the following must be done<sup>1</sup>:
 
@@ -92,7 +105,7 @@ To complete this task, the following must be done<sup>1</sup>:
 
 The final product should match the sample images and all test cases should be true.
 
-#### Test Cases
+### Test Cases <a name="testcases"></a>
 
 **Order Form**
 
@@ -132,7 +145,9 @@ The final product should match the sample images and all test cases should be tr
 - When a user submits an order from the Order Form, the new order(s) appear under "Current Orders"
 - When a user presses the "Home" link, they are moved to the Order Form page
 
-##### AngularJS Notes
+## Important Notes <a name="important"></a>
+### AngularJS <a name="angularjs"></a>
+
 * All AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 * If creating new files:
     - Put them in `public/js/app`
@@ -149,7 +164,7 @@ The final product should match the sample images and all test cases should be tr
     Run `gulp` or restart `gulp watch` after updating
 * Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
 
-##### Laravel Notes
+### Laravel
 
 Since this exercise does **not** require Laravel knowledge, the following should be kept in mind:
 
@@ -159,7 +174,8 @@ Since this exercise does **not** require Laravel knowledge, the following should
 
   For example, use `<% vm.variableName %>` instead of `{{ vm.variableName }}`
 
-
+---
+## Footnotes
 
 [1] Please keep in mind that these are bare-bones instructions and do not include all steps. They do assume that Exercise 1 is already complete.
 

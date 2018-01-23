@@ -13,7 +13,18 @@ Perform the following setup steps:
 3. Compile assets
 `gulp`
 
-## Viewing the Sample
+## Table of Contents
+
+* [Viewing the Sample](#viewingthesample)
+* [Functionality](#functionality)
+* [The Task](#task)
+  - [Instructions](#instructions)
+  - [Test Cases](#testcases)
+- [Important Notes](#important)
+  - [AngularJS](#angularjs)
+  - [Laravel](#laravel)
+
+## Viewing the Sample <a name="viewingthesample"></a>
 
 1. Run the installation steps shown above
 2. Start a local server instance from the Exercise1 directory
@@ -21,7 +32,7 @@ Perform the following setup steps:
 3. Open a browser window and go to your localhost, port 8000 (127.0.0.1:8000)
 4. Select the "Sample" link.
 
-### Functionality
+## Functionality <a name="functionality"></a>
 
 Your final product should match the provided sample, so be sure to play around with it prior to starting. The following functionality exists.
 
@@ -39,7 +50,7 @@ Your final product should match the provided sample, so be sure to play around w
   * The total price of all items in the cart
   * A "Remove All" button
 
-## The Task
+## The Task <a name="task"></a>
 
 Your task is to replicate the sample using AngularJS (version 1.5.8). The back-end route for this is already in place at `/angular`. All files needed have also been provided, so you will need to edit them to complete the task.
 
@@ -58,7 +69,7 @@ All necessary dependencies, including UI-Router, have already been imported into
 
 Bootstrap 3 CSS is also included.
 
-### Instructions
+### Instructions <a name="instructions"></a>
 
 To complete this task, the following must be done<sup>1</sup>:
 
@@ -68,9 +79,48 @@ To complete this task, the following must be done<sup>1</sup>:
 * Develop your controller in `order.controller.js`
 * Update the HTML template in `home-angular.blade.php`
 
-[1] Please keep in mind that these are bare-bones instructions and do not include all steps.
+### Test Cases <a name="testcases"></a>
 
-#### Laravel Notes
+* A list of four products appears (see below for specifics)
+* Each product has an "Add" button
+* An "Add All" button exists
+* An Items In Cart section appears, empty by default
+* When a user presses an "Add" button, that product appears in the cart with a removal "X"
+* When a user presses an "Add" button, the "Add" button for that product is disabled
+* When a user presses an "Add" button, the value for "Total" in the cart increases by the products's price
+* When a user presses the "Add All" button, all four products appear in the cart
+* When a user presses the "Add All" button, the "Add" buttons for all four products disable
+* When any products appear in the cart, the total value of all products is shown
+* When any products appear in the cart, a "Remove All" button exists
+* When a user presses a removal button, that product is removed from the cart
+* When a user presses a removal button, that product's "Add" button enables
+* When a user presses a removal button, the total value shown decreases by the product's price
+* When a user presses a removal button, if no products remain, the cart indicates that there is nothing to show
+* When a user presses a removal button, if no products remain, the total goes to zero and is no longer shown
+* When a user presses a removal button, if no products remain, the "Remove All" button disappears
+* When a user presses the "Remove All" button, all products in the cart disappear
+* When a user presses the "Remove All" button, all "Add" buttons enable
+* When a user presses the "Remove All" button, the cart indicates that there is nothing to show
+* When a user presses the "Remove All" button, the total goes to zero and is no longer shown
+* When a user presses the "Remove All" button, the "Remove All" button disappears
+
+**Original Products**
+
+| Name      | Price |
+| --------- | ----- |
+| Product 1 | $25   |
+| Product 2 | $15   |
+| Product 3 | $20   |
+| Product 4 | $10   |
+
+## Important Notes <a name="important"></a>
+
+### AngularJS <a name="angularjs"></a>
+
+* The final product should match the sample, and all AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
+* Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
+
+### Laravel <a name="laravel"></a>
 
 Since this exercise does **not** require Laravel knowledge, the following should be kept in mind:
 
@@ -79,6 +129,7 @@ Since this exercise does **not** require Laravel knowledge, the following should
 
   For example, use `<% vm.variableName %>` instead of `{{ vm.variableName }}`
 
-##### AngularJS Notes
-* The final product should match the sample, and all AngularJS code should use the [John Papa style guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
-* Any time a change is made to one of the AngularJS files, you will need to run `gulp` to view the change. This can be prevented by running `gulp watch` prior to starting.
+---
+## Footnotes
+
+[1] Please keep in mind that these are bare-bones instructions and do not include all steps.
