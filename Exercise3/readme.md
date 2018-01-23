@@ -333,9 +333,9 @@ Since this exercise does **not** require Laravel knowledge, the following should
 
 [3] By default, two users will exist with the following information. Only Username, Name, and Role should be visible.
 
-[4] This is to prevent a user from removing themselves while logged in
-
 | ID | Username   | Name       | Password  | Role  | Token      |
 | -- | ---------- | ---------- | --------- | ----- | ---------- |
 | 1  | test_user  | Test User  | testuser  | user  | 1k4hd2hf9d |
 | 2  | test_admin | Test Admin | testadmin | admin | 9d62hdo39a |
+
+[4] This is to prevent a user from removing themselves while logged in
