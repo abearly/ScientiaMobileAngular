@@ -209,6 +209,8 @@ Data
 
 The error message will change based on the [product validation rules](#validation)
 
+*Note* Removing a product will not remove orders using it, but they will have a value of `false` for `product`
+
 <a name="validation"></a>
 ### Product Validation
 
