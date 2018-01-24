@@ -1,8 +1,8 @@
 # ScientiaMobile AngularJS Practical Tests
 
-There are two AngularJS practical tests included in this repository.
+There are three AngularJS practical tests included in this repository.
 
-Both use [Laravel 5.3](https://laravel.com/docs/5.3) for their back-end, however, knowledge of Laravel is not required. All necessary back-end components have been set up as needed for each exercise.
+Each uses [Laravel 5.3](https://laravel.com/docs/5.3) for their back-end, however, knowledge of Laravel is not required. All necessary back-end components have been set up as needed for each exercise.
 
 Specific instructions are included in each exercise.
 
