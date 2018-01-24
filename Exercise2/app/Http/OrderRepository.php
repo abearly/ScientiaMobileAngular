@@ -64,7 +64,12 @@ class OrderRepository
         $this->orders[] = $order;
     }
 
-    public function saveOrders()
+    public function clearOrders()
+    {
+        $this->orders = [];
+    }
+
+    public function saveOrders($respond = true)
     {
         $response = ApiResponse::instance();
         if (!file_put_contents($this->file, json_encode($this->orders))) {
@@ -74,10 +79,13 @@ class OrderRepository
             $response->message = "Could not save orders";
             return $response->send();
         }
-        $response->status = ApiResponse::STATUS_CODE_OK;
-        $response->success = true;
-        $response->data = $this->orders;
-        $response->message = "Saved!";
-        return $response->send();
+        if ($respond) {
+            $response->status = ApiResponse::STATUS_CODE_OK;
+            $response->success = true;
+            $response->data = $this->orders;
+            $response->message = "Saved!";
+            return $response->send();
+        }
+        return;
     }
 }

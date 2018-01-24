@@ -149,6 +149,18 @@ class Controller extends BaseController
         }
 
         unset($products[$index]);
+
+        $order_repo = new OrderRepository();
+        $orders = $order_repo->getOrders();
+        $order_repo->clearOrders();
+        foreach ($orders as $order) {
+            if ($order->product_id === $item['id']) {
+                $order->product_id = -1;
+            }
+            $order_repo->addToOrders($order);
+        }
+        $order_repo->saveOrders(false);
+
         $repo->saveProducts($products);
     }
 

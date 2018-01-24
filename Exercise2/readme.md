@@ -151,6 +151,7 @@ The final product should match the sample images and all test cases should be tr
     - The price field is not an integer
     - The price field is less than 1
 - When a user presses "Remove" for a product, the product no longer appears under "Available Products" on either the Admin Page or the Order Form
+- When a user presses "Remove" for a product, any existing order using that product is listed as "No Longer Available"
 - When a user submits an order from the Order Form, the new order(s) appear under "Current Orders"
 - When a user presses the "Home" link, they are moved to the Order Form page
 
