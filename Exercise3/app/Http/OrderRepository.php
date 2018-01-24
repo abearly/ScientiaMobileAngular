@@ -68,6 +68,11 @@ class OrderRepository
         $this->orders[] = $order;
     }
 
+    public function clearOrders()
+    {
+        $this->orders = [];
+    }
+
     public function removeFromOrders($id)
     {
         foreach ($this->orders as $key => $order) {
@@ -77,7 +82,7 @@ class OrderRepository
         }
     }
 
-    public function saveOrders()
+    public function saveOrders($respond = true)
     {
         $response = ApiResponse::instance();
 
@@ -93,10 +98,13 @@ class OrderRepository
         foreach ($this->orders as $order) {
             $order->product = $product_repo->findById($order->product_id);
         }
-        $response->status = ApiResponse::STATUS_CODE_OK;
-        $response->success = true;
-        $response->data = $this->orders;
-        $response->message = "Saved!";
-        return $response->send();
+        if ($respond) {
+            $response->status = ApiResponse::STATUS_CODE_OK;
+            $response->success = true;
+            $response->data = $this->orders;
+            $response->message = "Saved!";
+            return $response->send();
+        }
+        return;
     }
 }
