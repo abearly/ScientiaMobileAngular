@@ -343,9 +343,12 @@ Example Body
             "name": "Product 4",
             "price": 10
         }
-    ]
+    ],
+    "user_id": 1
 }
 ```
+
+*Note* `user_id` is not needed until Exercise 3.
 
 **Response** `200`
 
@@ -656,9 +659,15 @@ Example Body
         "username": "new_user",
         "role": "user",
         "token": "134hd7sr3jd"
-    }
+    },
+    "changePassword": true,
+    "repeat": "newuser"
 }
 ```
+
+*Note* `changePassword` and `repeat` are not required
+
+
 **Response** `200`
 
 Example Data
