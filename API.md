@@ -116,9 +116,11 @@ Data
 Example Body
 ```json
 {
-    "id": 1,
-    "name": "Product 1",
-    "price": 10
+    "item": {
+        "id": 1,
+        "name": "Product 1",
+        "price": 10
+    }
 }
 ```
 
