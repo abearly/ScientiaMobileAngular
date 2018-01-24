@@ -61,6 +61,25 @@ Example Data
 }
 ```
 
+**Response** `400`
+
+Example Data
+```json
+{
+    "success": false,
+    "status": 400,
+    "message": "<ErrorMessage>",
+    "data": {
+        "<ErrorField>"
+    }
+}
+```
+
+| Issue | ErrorMessage | ErrorField |
+| ----- | ------------ | ---------- |
+| Password does not match username | Invalid password! | 'password' |
+| Username doesn't exist | Unknown username! | 'username' |
+
 <a name="products"></a>
 ## Products
 
