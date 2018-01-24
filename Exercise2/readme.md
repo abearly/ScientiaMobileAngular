@@ -90,7 +90,7 @@ All necessary dependencies, including UI-Router, have already been imported into
 
 Bootstrap 3 CSS is also included.
 
-The modal should be created using [UI Bootstrap](https://angular-ui.github.io/bootstrap/), which has already been imported into the HTML.
+The modal should be created using [UI Bootstrap](https://angular-ui.github.io/bootstrap/), which has already been imported into the HTML. TemplateURL values can be generated using `view/{template}`.
 
 <a name="instructions"></a>
 ### Instructions
