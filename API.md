@@ -4,6 +4,7 @@ The API required for completing these exercises has been provided to you.
 
 ## Table of Contents
 
+* [Login](#login)
 * [Products](#products)
     - [Get](#getproducts)
     - [Add](#addproduct)
@@ -21,6 +22,44 @@ The API required for completing these exercises has been provided to you.
     - [Edit](#edituser)
     - [Change Password](#changepassword)
     - [Delete](#deleteuser)
+
+<a name="login"></a>
+## Login
+
+### Log into the application
+
+**POST** `/login`
+
+**Request**
+
+Example Body
+```json
+{
+    "username": "test",
+    "password": "test123"
+}
+```
+
+**Response** `200`
+
+Example Data
+```json
+{
+    "success": true,
+    "status": 200,
+    "message": "Login successful!",
+    "data": {
+        "user": {
+            "id": 1,
+            "name": "Test User",
+            "password": "test123",
+            "role": "user",
+            "token": "1d8fy4js9f",
+            "username": "test"
+        }
+    }
+}
+```
 
 <a name="products"></a>
 ## Products
