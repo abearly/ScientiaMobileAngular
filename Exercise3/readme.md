@@ -194,6 +194,7 @@ The final product should match the sample images and all test cases should be tr
 **Admin Page**
 * The menu appears with "Admin" shown as active
 * All functionality from Exercise 2 still exists
+* When a user presses update on the "Edit" modal, any product name changes are reflected on the current orders table
 * The "Products" tab is open by default
 * The "Current Orders" table shows "Yes" or "No" under "Fulfilled?"
 * The "Current Orders" table shows the user's name for any order placed by a logged in user
