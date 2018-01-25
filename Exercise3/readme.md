@@ -223,6 +223,7 @@ The final product should match the sample images and all test cases should be tr
 - When a user presses "Edit" for a user, a modal appears
 - When a user presses close on the "Edit" modal, the "Users" reset to their original state and the modal closes
 - When a user presses update on the "Edit" modal, the user appears under "Users" on the Admin Page with the updated information and the modal closes
+- When a user updates their own information, the "Role" options are disabled for the logged in user<sup>[4](#fn4)</sup>
 - When a user updates their own information and changes their "name", the menu welcome message changes to reflect the name change
 - Updating a user uses the API
 - When a user's information is updated, those updates are reflected on the My Account page for that user on a subsequent login
@@ -242,6 +243,7 @@ The final product should match the sample images and all test cases should be tr
   - The password value does not match the confirm password value
   - The password value is less than 6 characters long
 - When a user presses "Remove" for a user, the user no longer appears under "Users"
+- When a user presses "Remove" for a user, any orders for that user no longer appear under "Current Orders"
 
 **Login**
 
@@ -367,4 +369,4 @@ Since this exercise does **not** require Laravel knowledge, the following should
 | 2  | test_admin | Test Admin | testadmin | admin | 9d62hdo39a |
 
 <a name="fn4"></a>
-[4] This is to prevent a user from removing themselves while logged in
+[4] This is to prevent a user from removing/downgrading themselves while logged in

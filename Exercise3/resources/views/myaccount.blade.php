@@ -9,11 +9,11 @@
                 <h2>Account Information</h2>
                 <ul class="list-group"></ul>
             </div>
-        </div>
-        <div class="col-md-6">
-            <h2>My Orders</h2>
-            <div>
-                <table class="table table-striped table-hover"></table>
+            <div class="col-md-6">
+                <h2>My Orders</h2>
+                <div>
+                    <table class="table table-striped table-hover"></table>
+                </div>
             </div>
         </div>
     </div>
