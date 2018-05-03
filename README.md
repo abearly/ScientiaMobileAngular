@@ -17,6 +17,14 @@ These should be installed prior to attempting the exercises.
 1. Download and install [composer](https://getcomposer.org/)
 2. Download and install [npm](https://www.npmjs.com/get-npm)
 
+The following versions are known to work:
+* composer: 1.5.0
+* Node.js: 8.7.0
+* npm: 5.6.0
+* gulp: 3.9.1 (local version)
+
+Any other versions may cause issues in setup.
+
 ### Installation
 These steps should be done for each exercise.
 
